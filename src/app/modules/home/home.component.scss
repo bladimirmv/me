@@ -1,0 +1,50 @@
+.banner {
+  z-index: 99999;
+  position: relative;
+  top: -100px;
+  width: 100%;
+  min-height: 700px;
+  background-color: var(--retro-yellow-color);
+  background-image: url(./../../../assets/bladimirmv.png);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+
+  .welcome-text {
+    // background-color: rgba(255, 0, 0, 0.105);
+    max-width: 800px;
+  }
+  .welcome-text .greeting-section {
+    font-size: 50px;
+    padding-left: 40px;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .greeting-section .hand {
+    animation: rotateHand 1.5s infinite;
+    display: inline-block;
+  }
+
+  @keyframes rotateHand {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    50% {
+      transform: rotate(-15deg);
+    }
+
+    100% {
+      transform: rotate(35deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}

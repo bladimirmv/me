@@ -35,6 +35,7 @@ html,
 body {
   height: 100%;
   font-family: "Nunito";
+  background-color: var(--background);
 }
 body {
   margin: 0;
@@ -129,6 +130,8 @@ body {
   --retro-yellow-color: #ece6c2;
   --retro-cyan-color: #73bda8;
 
+  --retro-yellow-shadow-color: #ece6c2d6;
+
   --font-mono: "ubuntu mono";
 
   --background: var(--retro-yellow-color);
@@ -189,4 +192,26 @@ body {
   width: 98%;
   max-width: 1490px;
   margin: 0 auto;
+}
+
+.retro-brown-button {
+  background-color: var(--retro-brown-color);
+  color: var(--retro-yellow-color);
+  text-transform: capitalize;
+  border-radius: 50px !important;
+}
+
+.retro-brown-button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(
+    to right,
+    #6f5643,
+    #cc6b49,
+    #d2a24c,
+    #73bda8,
+    #cc6b49
+  );
+  background-position: 100% 100%;
+  background-size: 500% 100%;
+  transition: background-position 2s ease-out;
 }

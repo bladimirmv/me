@@ -1,26 +1,24 @@
-.banner {
-  width: 100%;
-  min-height: 700px;
-  background-color: red;
-  background-image: url(./../../../../assets/download.png);
-  background-repeat: no-repeat;
-  // background-position: center;
-  background-position: top;
-  background-size: cover;
-  background-attachment: fixed;
-}
+// .banner {
+//   width: 100%;
+//   min-height: 700px;
+//   background-color: var(--retro-yellow-color);
+//   background-image: url(./../../../../assets/gg.png);
+//   background-repeat: no-repeat;
+//   background-position-y: top;
+
+//   background-size: cover;
+//   background-attachment: fixed;
+
+//   .welcome-text {
+//     font-size: 50px;
+//   }
+// }
 
 .toolbar {
-  background-color: var(--nav-bg);
+  background-color: transparent;
   color: var(--nav-text-color);
   height: 100px;
   padding: 50px;
-
-  position: sticky;
-  top: 0;
-
-  // border: 2px solid var(--retro-brown-color);
-  // border-radius: 50px 0 50px 0px;
 
   .content {
     display: flex;
@@ -43,6 +41,7 @@
   }
   .logo-text:hover {
     transform: scale(1.1);
+    color: var(--retro-orange-color);
   }
 
   .toolbar-links {
@@ -54,10 +53,17 @@
   }
   .toolbar-links a {
     text-decoration: none;
+    color: var(--retro-brown-color);
   }
 
   .toolbar-links li:hover {
     text-decoration: underline;
     transform: scale(1.1);
+    & a {
+      color: var(--retro-cyan-color);
+      background-color: var(--retro-yellow-color);
+      padding: 5px;
+      border: 1px solid var(--retro-orange-color);
+    }
   }
 }
