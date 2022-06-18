@@ -1,0 +1,9 @@
+.app-main {
+  height: 100%;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  background-color: var(--background);
+}

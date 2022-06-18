@@ -1,0 +1,63 @@
+.banner {
+  width: 100%;
+  min-height: 700px;
+  background-color: red;
+  background-image: url(./../../../../assets/download.png);
+  background-repeat: no-repeat;
+  // background-position: center;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.toolbar {
+  background-color: var(--nav-bg);
+  color: var(--nav-text-color);
+  height: 100px;
+  padding: 50px;
+
+  position: sticky;
+  top: 0;
+
+  // border: 2px solid var(--retro-brown-color);
+  // border-radius: 50px 0 50px 0px;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    text-decoration: none;
+    color: var(--retro-brown-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+  .logo-text {
+    font-size: 32px;
+    font-family: var(--font-mono);
+  }
+  .logo-text:hover {
+    transform: scale(1.1);
+  }
+
+  .toolbar-links {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    text-transform: capitalize;
+  }
+  .toolbar-links a {
+    text-decoration: none;
+  }
+
+  .toolbar-links li:hover {
+    text-decoration: underline;
+    transform: scale(1.1);
+  }
+}
