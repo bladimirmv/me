@@ -20,6 +20,9 @@
   height: 100px;
   padding: 50px;
 
+  position: sticky;
+  top: 0;
+
   .content {
     display: flex;
     flex-direction: row;
@@ -34,6 +37,8 @@
     flex-direction: row;
     align-items: center;
     gap: 16px;
+
+    outline: none;
   }
   .logo-text {
     font-size: 32px;
@@ -50,6 +55,7 @@
     display: flex;
     gap: 16px;
     text-transform: capitalize;
+    font-weight: bolder;
   }
   .toolbar-links a {
     text-decoration: none;
@@ -57,13 +63,14 @@
   }
 
   .toolbar-links li:hover {
-    text-decoration: underline;
+    // text-decoration: underline;
     transform: scale(1.1);
     & a {
+      border-radius: 30px;
+      padding: 5px 10px;
       color: var(--retro-cyan-color);
       background-color: var(--retro-yellow-color);
-      padding: 5px;
-      border: 1px solid var(--retro-orange-color);
+      border: 2px solid var(--retro-orange-color);
     }
   }
 }

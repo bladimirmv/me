@@ -1,7 +1,7 @@
 .banner {
   z-index: 99999;
   position: relative;
-  top: -100px;
+  margin-top: -100px;
   width: 100%;
   min-height: 700px;
   background-color: var(--retro-yellow-color);
@@ -12,17 +12,34 @@
   background-attachment: fixed;
 
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
-  .welcome-text {
-    // background-color: rgba(255, 0, 0, 0.105);
+  // .wave {
+  //   background-image: url(./../../../assets/wave.svg);
+  //   background-repeat: no-repeat;
+  //   background-position: bottom;
+  //   width: 100%;
+  //   height: 100%;
+  //   // left: 0;
+
+  //   position: absolute;
+  // }
+
+  .welcome-container {
     max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    color: var(--retro-cyan-color);
+    gap: 16px;
   }
-  .welcome-text .greeting-section {
-    font-size: 50px;
-    padding-left: 40px;
+  .greeting-section {
+    font-size: 55px;
     text-align: center;
-    line-height: 50px;
+    line-height: 60px;
+    font-weight: bolder;
+    color: var(--retro-orange-color);
   }
 
   .greeting-section .hand {
@@ -30,21 +47,81 @@
     display: inline-block;
   }
 
-  @keyframes rotateHand {
-    0% {
-      transform: rotate(0deg);
+  @keyframes type {
+    from {
+      width: 0ch;
+
+      border-right: 1px solid red;
     }
 
-    50% {
-      transform: rotate(-15deg);
-    }
+    to {
+      width: 12ch;
 
-    100% {
-      transform: rotate(35deg);
-    }
-
-    100% {
-      transform: rotate(0deg);
+      border-right: 1px solid red;
     }
   }
+  // .welcome-container p {
+  //   font-size: ;
+  // }
+
+  .welcome-buttons {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+}
+
+@keyframes rotateHand {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-15deg);
+  }
+
+  100% {
+    transform: rotate(35deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.section-about {
+  background-color: var(--retro-cyan-color);
+  // background-color: rgb(255, 0, 0);
+  width: 100%;
+  height: 500px;
+
+  color: var(--retro-yellow-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  // .wave {
+  //   background-image: url(./../../../assets/wave.svg);
+  //   background-color: transparent;
+  //   background-repeat: no-repeat;
+  //   background-position: top;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: var(--retro-orange-color);
+
+  //   bottom: 0;
+  //   // left: 0;
+
+  //   position: absolute;
+  // }
+
+  &::after {
+    content: "";
+    position: absolute;
+  }
+}
+
+.section-about:nth-child(even) {
+  background-color: var(--retro-orange-color);
 }

@@ -7,11 +7,11 @@ const routes: Routes = [
     path: '',
     component: AppContainerComponent,
     children: [
-      {
-        path: '',
-        redirectTo: '/',
-        pathMatch: 'full',
-      },
+      // {
+      //   path: '',
+      //   redirectTo: '/',
+      //   pathMatch: 'full',
+      // },
       {
         path: '',
         loadChildren: () =>
