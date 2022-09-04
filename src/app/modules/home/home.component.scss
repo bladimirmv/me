@@ -7,7 +7,7 @@
   background-color: var(--retro-yellow-color);
   background-image: url(./../../../assets/bladimirmv.png);
   background-repeat: no-repeat;
-  background-position-y: top;
+  background-position: top;
   background-size: cover;
   background-attachment: fixed;
 
@@ -91,30 +91,14 @@
 
 .section-about {
   background-color: var(--retro-cyan-color);
-  // background-color: rgb(255, 0, 0);
   width: 100%;
   height: 500px;
 
   color: var(--retro-yellow-color);
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-
-  position: relative;
-  // .wave {
-  //   background-image: url(./../../../assets/wave.svg);
-  //   background-color: transparent;
-  //   background-repeat: no-repeat;
-  //   background-position: top;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-color: var(--retro-orange-color);
-
-  //   bottom: 0;
-  //   // left: 0;
-
-  //   position: absolute;
-  // }
+  align-itemscustomers: center;
 
   &::after {
     content: "";
@@ -124,4 +108,64 @@
 
 .section-about:nth-child(even) {
   background-color: var(--retro-orange-color);
+}
+
+.customers {
+  // background-color: red !important;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.customers .customer {
+  cursor: pointer;
+  min-width: 300px;
+  min-height: 230px;
+  // border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-repeat: no-repeat;
+
+  background-image: url(./../../../assets/blob.svg);
+  background-position: top;
+  background-size: contain;
+
+  img {
+    filter: grayscale(100%);
+    max-width: 250px;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:hover > img {
+    filter: grayscale(0%);
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .banner {
+    background-position: left;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section-about {
+    height: 100vh;
+  }
+  .customers {
+    flex-direction: column;
+  }
+
+  .customers .customer img {
+    filter: grayscale(0%);
+  }
+}
+@media screen and (max-width: 640px) {
+  .welcome-buttons {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

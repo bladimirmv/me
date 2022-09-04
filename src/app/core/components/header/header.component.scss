@@ -18,7 +18,7 @@
   background-color: transparent;
   color: var(--nav-text-color);
   height: 100px;
-  padding: 50px;
+  // padding: 50px;
 
   position: sticky;
   top: 0;
@@ -72,5 +72,22 @@
       background-color: var(--retro-yellow-color);
       border: 2px solid var(--retro-orange-color);
     }
+  }
+
+  .menu-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .toolbar {
+    // padding: 20px;
+  }
+  .toolbar-links li {
+    background-color: red;
+    display: none;
+  }
+  .toolbar-links .menu-button {
+    display: flex;
   }
 }

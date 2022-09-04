@@ -240,3 +240,10 @@ body {
 
   transition: background-position 1.5s ease-out;
 }
+
+.title-h2 {
+  font-size: 40px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
